@@ -8,7 +8,8 @@ int main() {
 
     // perform_bubbleSort();
 
-    perform_mergeSort();
+    // perform_mergeSort();
 
+    perform_insertSort();
     return 0;
 }

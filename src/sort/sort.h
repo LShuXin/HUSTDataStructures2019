@@ -30,5 +30,12 @@ void mergeSort_v2(simpleSort_elemType arr[], int len);
 
 void perform_mergeSort();
 
+void insertSort_v1(int arr[], int len);
+
+void insertSort_v2(int arr[], int len);
+
+
+void perform_insertSort();
+
 
 #endif

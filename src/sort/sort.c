@@ -248,3 +248,53 @@ void perform_mergeSort() {
 
 
 
+
+
+// 插入排序实现1：
+// 从下标为1的元素开始，假定前面的元素都是有序的
+// 找到比当前元素小的元素，并将当前元素插入到他的前面
+void insertSort_v1(int arr[], int len) {
+    int i, j;
+    int t;
+    for (i = 1; i <= len - 1; ++i) {
+        t = arr[i];
+        for (j = i - 1; j >= 0 && t < arr[j]; --j) {
+            arr[j + 1] = arr[j];
+        }
+        arr[j + 1] = t;    //!!!!!
+    }
+}
+
+// 插入排序实现2：
+// 其实这种方案就是将临时变量t换成了数组的第一个元素，
+// 这样数组的第一个元素就会被专门用来存放临时变量，数组的长度变大了一个
+void insertSort_v2(int arr[], int len) {
+    int i, j;
+    for (i = 2; i <= len; ++i) {
+        arr[0] = arr[i];    //  避免了申请临时变量
+        for (j = i - 1; j >= 1 && arr[0] < arr[j]; --j) {
+            arr[j + 1] = arr[j];
+        }
+        arr[j + 1] = arr[0];
+    }
+}
+
+void perform_insertSort() {
+    int arr1[] = {1, 6556, 5646, 56, 51, 4945, 16454, 64, 894, 10, 3};
+    int arr2[] = {-1, 1, 6556, 5646, 56, 51, 4945, 16454, 64, 894, 10, 3};
+    int len1 = 11;
+    int len2 = 11;
+    insertSort_v1(arr1, len1);
+    insertSort_v2(arr2, len2);
+
+    int i;
+    for (i = 0; i < len1; ++i) {
+        printf("%d ", arr1[i]);
+    }
+    printf("\n");
+
+    for (i = 1; i <= len2; ++i) {
+        printf("%d ", arr2[i]);
+    }
+
+}

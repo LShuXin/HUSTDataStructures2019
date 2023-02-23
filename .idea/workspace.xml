@@ -21,7 +21,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40665d79-5202-465a-b029-60209cbd2e16" name="Default Changelist" comment="" />
+    <list default="true" id="40665d79-5202-465a-b029-60209cbd2e16" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/tree/tree.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tree/tree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,15 +46,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/tree" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/tree" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -91,6 +95,8 @@
       <workItem from="1676995544110" duration="995000" />
       <workItem from="1676996716371" duration="538000" />
       <workItem from="1676997963212" duration="78000" />
+      <workItem from="1676998126740" duration="1668000" />
+      <workItem from="1677078902371" duration="5356000" />
     </task>
     <servers />
   </component>
@@ -110,25 +116,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1878" height="359" key="GridCell.Tab.0.bottom" timestamp="1676996610198">
+    <state width="1878" height="359" key="GridCell.Tab.0.bottom" timestamp="1677000657543">
       <screen x="0" y="25" width="1920" height="968" />
     </state>
-    <state width="1878" height="359" key="GridCell.Tab.0.bottom/0.25.1920.968@0.25.1920.968" timestamp="1676996610198" />
-    <state width="1878" height="359" key="GridCell.Tab.0.center" timestamp="1676996610197">
+    <state width="1878" height="359" key="GridCell.Tab.0.bottom/0.25.1920.968@0.25.1920.968" timestamp="1677000657543" />
+    <state width="1878" height="359" key="GridCell.Tab.0.center" timestamp="1677000657543">
       <screen x="0" y="25" width="1920" height="968" />
     </state>
-    <state width="1878" height="359" key="GridCell.Tab.0.center/0.25.1920.968@0.25.1920.968" timestamp="1676996610197" />
-    <state width="1878" height="359" key="GridCell.Tab.0.left" timestamp="1676996610197">
+    <state width="1878" height="359" key="GridCell.Tab.0.center/0.25.1920.968@0.25.1920.968" timestamp="1677000657543" />
+    <state width="1878" height="359" key="GridCell.Tab.0.left" timestamp="1677000657542">
       <screen x="0" y="25" width="1920" height="968" />
     </state>
-    <state width="1878" height="359" key="GridCell.Tab.0.left/0.25.1920.968@0.25.1920.968" timestamp="1676996610197" />
-    <state width="1878" height="359" key="GridCell.Tab.0.right" timestamp="1676996610198">
+    <state width="1878" height="359" key="GridCell.Tab.0.left/0.25.1920.968@0.25.1920.968" timestamp="1677000657542" />
+    <state width="1878" height="359" key="GridCell.Tab.0.right" timestamp="1677000657543">
       <screen x="0" y="25" width="1920" height="968" />
     </state>
-    <state width="1878" height="359" key="GridCell.Tab.0.right/0.25.1920.968@0.25.1920.968" timestamp="1676996610198" />
-    <state x="560" y="246" key="Vcs.Push.Dialog.v2" timestamp="1676996136985">
+    <state width="1878" height="359" key="GridCell.Tab.0.right/0.25.1920.968@0.25.1920.968" timestamp="1677000657543" />
+    <state x="560" y="246" key="Vcs.Push.Dialog.v2" timestamp="1676998273819">
       <screen x="0" y="25" width="1920" height="968" />
     </state>
-    <state x="560" y="246" key="Vcs.Push.Dialog.v2/0.25.1920.968@0.25.1920.968" timestamp="1676996136985" />
+    <state x="560" y="246" key="Vcs.Push.Dialog.v2/0.25.1920.968@0.25.1920.968" timestamp="1676998273819" />
   </component>
 </project>

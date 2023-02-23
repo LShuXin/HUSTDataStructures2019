@@ -12,6 +12,9 @@ add_library(${project_name}-lib
             src/a_test.h
             src/a_test.c
             src/headers.h
+            src/define.h
+            src/sort/sort.h
+            src/sort/sort.c
             )
 
 

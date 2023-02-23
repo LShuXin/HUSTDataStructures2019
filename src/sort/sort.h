@@ -38,4 +38,15 @@ void insertSort_v2(int arr[], int len);
 void perform_insertSort();
 
 
+
+void selectSort_swap(int *a, int *b);
+
+
+void selectSort(int arr[], int len);
+
+
+
+void perform_selectSort();
+
+
 #endif

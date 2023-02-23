@@ -298,3 +298,46 @@ void perform_insertSort() {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void selectSort_swap(int *a, int *b) {
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+
+// 从第1个到倒数第2个，依次从后面的序列中找出最小的一个放到头部有序序列末尾
+void selectSort(int arr[], int len) {
+    int i, j, min;
+    for (i = 0; i < len - 1; ++i) {
+        min = i;
+        for (j = i + 1; j < len; ++j) {
+            if (arr[j] < arr[min]) {
+                min = j;
+            }
+        }
+        selectSort_swap(&arr[min], &arr[i]);
+    }
+}
+
+void perform_selectSort() {
+    int arr[] = {45, 5, 68, 5, 25, 1, 3, 5, 8, 9, 66, 999};
+    int len = 12;
+    selectSort(arr, 12);
+    int i;
+    for (i = 0; i < len; ++i) {
+        printf("%d ", arr[i]);
+    }
+}

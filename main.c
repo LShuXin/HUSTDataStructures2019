@@ -10,6 +10,8 @@ int main() {
 
     // perform_mergeSort();
 
-    perform_insertSort();
+    // perform_insertSort();
+
+    perform_selectSort();
     return 0;
 }

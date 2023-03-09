@@ -49,4 +49,7 @@ void selectSort(int arr[], int len);
 void perform_selectSort();
 
 
+void perform_array_heap_sort();
+
+
 #endif

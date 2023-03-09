@@ -341,3 +341,106 @@ void perform_selectSort() {
         printf("%d ", arr[i]);
     }
 }
+
+
+
+
+
+
+
+
+
+
+// 最大堆的概念
+// 根结点的键值是所有堆结点键值中最大者
+// 且每个结点的值都比其孩子的值大
+// 左子节点的键值要大于右子节点的键值
+//
+// 堆排序的思路
+// 1.首先所有的元素存放在一维数组中
+// 2.将数组调整为一个最大堆
+// 3.将堆顶元素（最大的元素）拿出放到最后，并将剩下的元素重新调整为一个最大堆
+// 4.重复3直到堆中的全部元素都被取出
+// 最后数组元素将按照升序排列
+void array_heap_sort_swap(int *a, int *b)
+{
+    int t;
+    t = *a;
+    *a = *b;
+    *b = t;
+}
+
+void array_heap_sort_perc_down(int arr[], int p, int len)
+{
+    // 将含有len个元素的数组arr调整成以p为根节点的最大堆
+    // p 其实是数组的索引，在这里可以唯一标识一颗子树
+    int x;
+    int child, parent;
+    // 拿出堆顶的最大元素
+    x = arr[p];
+    // len = 7
+    /*
+     实现A:       0                         实现B:           1
+                / \                                       / \
+               1   2                                     2   3
+              / \ / \                                   / \ / \
+             3  4 5  6(len-1)                          4  5 6  7（len）
+
+     如图所示：当数组的第一个位置也被用作堆空间时             当数组的第一个位置不被用作堆空间时
+        节点i的左子节点为 2 * i + 1                      节点i的左子节点为 2 * i
+        最后一个父节点为 len / 2 - 1                     最后一个节点的父节点为 len / 2
+        最后一个节点的索引为 len - 1                      最后一个节点的索引为 len
+    */
+    // 实现A
+    for (parent = p; parent * 2 + 1 < len; parent = child) {
+        // 左子节点
+        child = parent * 2 + 1;
+        // 找到子节点中最大的
+        if ((child < len - 1) && arr[child] < arr[child + 1])
+        {
+            child++;
+        }
+        if (x >= arr[child]) {
+            // 父节点大于子节点
+            break;
+        } else {
+            arr[parent] = arr[child];
+        }
+
+    }
+    // ？
+    arr[parent] = x;
+}
+
+
+/// 正式的堆排序代码
+void array_heap_sort(int arr[], int len)
+{
+    int i;
+    // 第一次将原数组建立成最大堆, 从最后一个父节点开始
+    for (i = len / 2 - 1; i >= 0; i--)
+    {
+        // 数组的名字直接可以用作指针
+        array_heap_sort_perc_down(arr, i, len);
+    }
+
+    // 将最大堆调整为有序
+    // 注意不是大于等于0，是大于零
+    for (i = len - 1; i > 0; i--)
+    {
+        // 将最大的元素放到“最后”
+        array_heap_sort_swap(&arr[i], &arr[0]);
+        array_heap_sort_perc_down(arr, 0, i);
+        // 重新调整最大堆，注意此时堆的大小已经发生了变化；
+    }
+}
+
+void perform_array_heap_sort() {
+    int arr[] = {0, 1, 4, 55, 45, 2, 65, 88, 89, 2, 4, 7, 852, 456, 588};
+    // 第一个位置的元素有效
+    int len = 15;
+    array_heap_sort(arr, len);
+    for (int i = 0; i < len; i++) {
+        printf("%d ", arr[i]);
+    }
+}

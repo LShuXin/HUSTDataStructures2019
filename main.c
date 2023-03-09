@@ -12,6 +12,8 @@ int main() {
 
     // perform_insertSort();
 
-    perform_selectSort();
+    // perform_selectSort();
+
+    perform_array_heap_sort();
     return 0;
 }
